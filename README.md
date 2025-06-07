@@ -1,7 +1,7 @@
 # PiFaaS
 
 PiFaaS is a lightweight Function-as-a-Service (FaaS) platform designed with a low footprint in mind (e.g., Raspberry Pi Zero). It enables you to deploy, run, schedule, and log small scripts (Python, Bash, etc.) remotely over HTTP — perfect for edge automation and IoT projects.
----
+
 
 ## Features
 * **Run scripts on demand**
@@ -19,7 +19,7 @@ PiFaaS is a lightweight Function-as-a-Service (FaaS) platform designed with a lo
 * **Minimal dependencies**
   Pure Python 3, no heavy dependencies, runs efficiently on Raspberry Pi Zero.
 
----
+
 
 ## Getting Started
 
@@ -78,7 +78,7 @@ curl -X DELETE http://<pi-zero-ip>:8080/schedule/hello.py
 curl http://<pi-zero-ip>:8080/logs/hello.py
 ```
 
----
+
 ## Function Script Requirements
 
 * Scripts **must be executable** (`chmod +x`).
@@ -86,7 +86,7 @@ curl http://<pi-zero-ip>:8080/logs/hello.py
 * Scripts can be any executable (Python, shell, etc.).
 * Input payload (POST request body) is passed to the script’s **stdin**.
 
----
+
 
 ## Security & Notes
 * This server **does not implement authentication or encryption** — only use on trusted or private networks.
@@ -94,7 +94,7 @@ curl http://<pi-zero-ip>:8080/logs/hello.py
 * Cron jobs are managed per user using the current user’s crontab.
 * Logs are stored in `logs/` with `.log` extension, appending output with timestamps.
 
----
+
 
 ## License
 
